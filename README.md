@@ -1,7 +1,6 @@
 # Adv-Task 2
 
 
-
 - Ensure that there is a rabbitmq server running with queue named `tasks` for this task-consumer deployment. 
 - After running `consumer-deploy.yaml`,  type this into url: http://localhost:31289/swagger/index.html
 
@@ -37,7 +36,7 @@ Sample Response:
 
 - For Qn5: SAGA, POST Request in swagger will add task to `task-processed` queue
 
-- 4 status numbers
+- 4 status number types
 
 | number | status     |   |   |   |
 |---|---------------|---|---|---|
