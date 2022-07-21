@@ -30,7 +30,7 @@ namespace TaskProcessor
 
             services.AddControllers();
             services.AddDbContext<TaskDbContext>(opt =>
-                                               opt.UseInMemoryDatabase("TaskList"));
+                                               opt.UseInMemoryDatabase("Task"));
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "TaskProcessor", Version = "v1" });
@@ -40,12 +40,13 @@ namespace TaskProcessor
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "TaskProcessor v1"));
-            }
+            //if (env.IsDevelopment())
+            //{
+            //    app.UseDeveloperExceptionPage();
+                
+            //}
+            app.UseSwagger();
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "TaskProcessor v1"));
 
             app.UseRouting();
 

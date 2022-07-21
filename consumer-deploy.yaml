@@ -13,13 +13,13 @@ spec:
     spec:
       containers:
       - name: task-consumer
-        image: rgan19/task-consumer:1.0.0
+        image: rgan19/task-consumer:2.0.0
         resources:
           limits: 
             memory: "1024Mi"
             cpu: "500m"
         ports:
-        - containerPort: 8080
+        - containerPort: 5000
         env:
         - name: RABBITMQ_HOST
           value: "rabbitmq"
@@ -38,5 +38,5 @@ spec:
     app: task-consumer
   ports:
   - port: 80
-    targetPort: 8080
+    targetPort: 5000
     nodePort: 31289

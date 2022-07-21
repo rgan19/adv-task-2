@@ -14,7 +14,7 @@ namespace TaskProcessor.Model
         {
         }
 
-        public DbSet<TaskDbContext> TaskItem { get; set; }
+        public DbSet<TaskItem> Task { get; set; }
     }
 }
 

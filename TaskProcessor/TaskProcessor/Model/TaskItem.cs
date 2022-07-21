@@ -9,6 +9,7 @@ namespace TaskProcessor.Model
 	public class TaskItem
 	{
 		[Required]
+		[Key]
 		public int taskID { get; set; }
 		public int customerID { get; set; }
 		public String description { get; set; }
